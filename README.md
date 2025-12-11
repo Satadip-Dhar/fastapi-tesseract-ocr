@@ -18,7 +18,7 @@ The application is currently live and accessible publicly.
 ### Infrastructure Agnosticism (GCP vs. AWS)
 The initial requirements for this project suggested Google Cloud Run. However, this solution was deliberately deployed to **AWS App Runner** to demonstrate a cloud-agnostic container strategy.
 
-By encapsulating the application logic, dependencies, and the OCR engine entirely within a Docker image, this solution achieves portability.
+By encapsulating the application logic, dependencies, and the OCR engine entirely within a Docker image, this solution achieves complete portability. The architecture decouples the workload from the specific cloud provider. Consequently, this exact container image should be compatible with Google Cloud Run, AWS ECS, Azure Container Apps without requiring any code modifications.
 
 ### Technical Stack
 * **Runtime:** Python 3.9 (Slim).
